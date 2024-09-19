@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Logs
 logs
 *.log
@@ -41,6 +43,12 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# testing
+/coverage
+
+# production
+/build
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
