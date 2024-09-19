@@ -1,6 +1,7 @@
 {
   "recommendations": [
     "esbenp.prettier-vscode", // Prettier formatter for VSCode
+    "charliermarsh.ruff" // Formatter for Python
     // "editorconfig.editorconfig",
     // Add more extensions as needed
 

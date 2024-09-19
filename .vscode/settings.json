@@ -1,6 +1,7 @@
 {
   // Overall
   "editor.formatOnSave": true, // Enable auto-formatting on file save
+  "editor.detectIndentation": false, // Force VSCode to use the tabSize specified in the settings
   "editor.tabSize": 2, // Set tab size to 2 spaces
   "files.eol": "\n", // Ensure LF line endings
   "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
@@ -10,6 +11,9 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit" // Automatically fix ESLint issues on save
     }
+  },
+  "[python]": {
+    "editor.formatOnSave": true
   },
 
   // Extension Specific
