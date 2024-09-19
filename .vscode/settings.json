@@ -13,16 +13,13 @@
     }
   },
   "[python]": {
-    "editor.formatOnSave": true
-  },
-
-  // Extension Specific
-  "prettier.singleQuote": true, // Use single quotes in Prettier
-  "prettier.tabWidth": 2,
-  "prettier.useTabs": false,
-  "prettier.trailingComma": "es5",
-  "prettier.printWidth": 80
-
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  }
   /*
   // FAQ -
   Q:  How to add settings? Where to find?
