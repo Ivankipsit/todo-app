@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode", // Prettier formatter for VSCode
+    // "editorconfig.editorconfig",
+    // Add more extensions as needed
+
+    /*
+    // FAQ -
+    Q:  How to add extensions?
+    A:  Each extension is identified by its unique identifier, which usually follows the format `publisher.extensionName`
+    */
+  ]
+}

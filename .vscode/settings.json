@@ -1,0 +1,37 @@
+{
+  // Overall
+  "editor.formatOnSave": true, // Enable auto-formatting on file save
+  "editor.tabSize": 2, // Set tab size to 2 spaces
+  "files.eol": "\n", // Ensure LF line endings
+  "files.trimTrailingWhitespace": true, // Remove trailing whitespace on save
+
+  // File Specific
+  "[javascript]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit" // Automatically fix ESLint issues on save
+    }
+  },
+
+  // Extension Specific
+  "prettier.singleQuote": true, // Use single quotes in Prettier
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 80
+
+  /*
+  // FAQ -
+  Q:  How to add settings? Where to find?
+  A:  - Goto File > Preferences > Settings
+      - You don't need to make changes to your overall VS code, So go to Workspace
+      - You can toggle between the values, your changes there will reflect in this file.
+
+  Q:  How to add file specific settings? Where to find?
+  A:  You can define settings that apply only to certain file types by using the `[language]`
+
+  Q:  Why do we have prettier both in extensions specific settings and as a .prettierrc and .eslintrc.json (in base dir)?
+  A:  - The extension specific workspace settings in only applicable for workspace (VS Code).
+      - If devs use other code editors other than VS Code, they might face formatting issues.
+      - To tackle this, we use .prettierrc.
+  */
+}
