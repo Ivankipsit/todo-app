@@ -73,6 +73,7 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# TODO - Try mssql
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
