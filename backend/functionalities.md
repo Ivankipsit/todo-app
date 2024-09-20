@@ -10,20 +10,20 @@
 
 For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.com/rxaviers/7360908)
 
-:white_check_mark: add time and date for task completion<br>
-:construction: implement jwt<br>
-:no_entry: add creation time and date of task with the created user<br>
+:construction: add time and date for task completion<br>
 :no_entry: display tasks in ascending order of time and date<br>
 :no_entry: filter for a specific date<br>
 :no_entry: search a specific task<br>
-:no_entry: have low/medium/hign priority<br>
-:no_entry: have mui icons for each task<br>
-:no_entry: step wise task - like a stepper. two types of task, simple or workflow type. like having a main task as 1. and having 1.1,1.2,1.3.<br>
-:no_entry: show like a dashboard count<br>
-:no_entry: can upload excel to create a tasklist<br>
-:no_entry: can have multiple users<br>
-:no_entry: maintain hierarchy for users<br>
-:no_entry: can visualize tasks of users below/tagged under a superior user<br>
-:no_entry: can send mail to complete a specific task if not sompleted<br>
-:no_entry: can have tag(s) for all tasks<br>
-:no_entry: superior user can create task for users below/tagged under them.<br>
+:no_entry: have low/medium/high priority<br>
+:no_entry: implement jwt<br>
+:game_die: add creation time and date of task with the created user<br>
+:game_die: have mui icons for each task<br>
+:game_die: step wise task - like a stepper. two types of task, simple or workflow type. like having a main task as 1. and having 1.1,1.2,1.3.<br>
+:game_die: show like a dashboard count<br>
+:game_die: can upload excel to create a tasklist<br>
+:game_die: can have multiple users<br>
+:game_die: maintain hierarchy for users<br>
+:game_die: can visualize tasks of users below/tagged under a superior user<br>
+:game_die: can send mail to complete a specific task if not sompleted<br>
+:game_die: can have tag(s) for all tasks<br>
+:game_die: superior user can create task for users below/tagged under them.<br>
