@@ -136,3 +136,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# pycache, migrations, dbs
+__pycache__/
+migrations/
+*.sqlite3
