@@ -1,10 +1,12 @@
+import { DarkTheme } from './appConfig/theme/DarkTheme';
 import { LightTheme } from './appConfig/theme/LightTheme';
 import TaskList from './pages/TaskList';
-import { ThemeProvider } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 
 function App() {
   return (
-    <ThemeProvider theme={LightTheme}>
+    <ThemeProvider theme={DarkTheme}>
+      <CssBaseline />
       <TaskList />
     </ThemeProvider>
   );
