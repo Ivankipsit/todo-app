@@ -10,7 +10,7 @@
 
 For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.com/rxaviers/7360908)
 
-:construction: add time and date for task completion<br>
+:white_check_mark: add time and date for task completion<br>
 :no_entry: display tasks in ascending order of time and date<br>
 :no_entry: filter for a specific date<br>
 :no_entry: search a specific task<br>
