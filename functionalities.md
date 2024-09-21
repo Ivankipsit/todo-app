@@ -10,6 +10,8 @@
 
 For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.com/rxaviers/7360908)
 
+## Backend
+
 :white_check_mark: add time and date for task completion<br>
 :no_entry: display tasks in ascending order of time and date<br>
 :no_entry: filter for a specific date<br>
@@ -27,3 +29,9 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 :game_die: can send mail to complete a specific task if not sompleted<br>
 :game_die: can have tag(s) for all tasks<br>
 :game_die: superior user can create task for users below/tagged under them.<br>
+
+## Frontend
+
+:construction: Work in both dark and light themes<br>
+:construction: CRUD for Tasks<br>
+:shipit: Designs for CRUD for Tasks<br>
