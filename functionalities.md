@@ -35,3 +35,7 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 :construction: Work in both dark and light themes<br>
 :construction: CRUD for Tasks<br>
 :shipit: Designs for CRUD for Tasks<br>
+Designs for CRUD for Tasks - Description<br>
+:construction: Add, Update - Collapsible fields : Quick Add and Detailed Add<br>
+:shipit: Listing, Delete - In Task Paper<br>
+:shipit: Delete - time based : give 5 seconds for user to undo the change<br>

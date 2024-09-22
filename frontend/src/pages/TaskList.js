@@ -3,6 +3,7 @@ import { TASKS } from '../appConfig/urlConfig';
 import axios from 'axios';
 import {
   Box,
+  Button,
   Grid2,
   Paper,
   SpeedDial,
@@ -13,6 +14,7 @@ import {
 } from '@mui/material';
 import AddTaskIcon from '@mui/icons-material/AddTask';
 import ShareIcon from '@mui/icons-material/Share';
+import LoupeIcon from '@mui/icons-material/Loupe';
 
 const actions = [
   {
@@ -56,14 +58,24 @@ export default function TaskList() {
   }, []);
   return (
     <>
-      <Paper sx={{ p: 1, m: 1 }}>
+      <Paper sx={{ p: 1, px: 1.5, m: 1 }}>
         <Grid2
           container
           spacing={1}
           direction={'row'}
+          alignItems={'center'}
           justifyContent={'space-between'}
         >
           <Grid2>My Tasks</Grid2>
+          <Grid2>
+            <Button
+              variant="outlined"
+              color="secondary"
+              startIcon={<LoupeIcon />}
+            >
+              Add Task
+            </Button>
+          </Grid2>
         </Grid2>
       </Paper>
       <Box sx={{ m: 1 }}>
