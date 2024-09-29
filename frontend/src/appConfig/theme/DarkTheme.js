@@ -41,9 +41,16 @@ let theme = createTheme({
 });
 
 export const DarkTheme = createTheme(theme, {
-  palette: {
-    info: {
-      main: theme.palette.secondary.main,
+  components: {
+    MuiButton: {
+      defaultProps: {
+        size: 'small',
+      },
+      styleOverrides: {
+        root: {
+          textTransform: 'capitalize',
+        },
+      },
     },
   },
 });
