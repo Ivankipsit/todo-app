@@ -3,7 +3,7 @@ from .models import Tasks
 from .serializers import TaskSerializer
 from rest_framework.response import Response
 from django.utils import timezone  # Import timezone to get the current time
-
+from django.db.models.functions import Lower
 
 class TaskViewSet(ModelViewSet):
     queryset = Tasks.objects.all()
@@ -14,8 +14,7 @@ class TaskViewSet(ModelViewSet):
         queryset = self.get_queryset()
         sorting_parameter = self.request.query_params.get("sorting_parameter")
         sort_by = self.request.query_params.get("sort_by")
-        filter_values = request.query_params.getlist("filter")  # Expecting a list
-
+        filter_values = request.query_params.getlist("filter[]")  # Expecting a list
         # Apply filtering based on the filter list
         if filter_values:
             if "overdue" in filter_values:
@@ -49,9 +48,9 @@ class TaskViewSet(ModelViewSet):
                 )
 
             if sort_by.lower() == "asc":
-                queryset = queryset.order_by(sorting_parameter)
+                queryset = queryset.order_by(Lower(sorting_parameter))
             elif sort_by.lower() == "desc":
-                queryset = queryset.order_by("-" + sorting_parameter)
+                queryset = queryset.order_by("-" + Lower(sorting_parameter))
             else:
                 return Response(
                     {"error": "Invalid sort_by value. Use 'asc' or 'desc'."}, status=400
