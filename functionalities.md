@@ -13,7 +13,7 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 ## Backend
 
 :white_check_mark: add time and date for task completion<br>
-:no_entry: display tasks in ascending order of time and date<br>
+:white_check_mark: display tasks in ascending order of time and date<br>
 :no_entry: filter for a specific date<br>
 :no_entry: search a specific task<br>
 :no_entry: have low/medium/high priority<br>
@@ -34,9 +34,9 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 
 :construction: Work in both dark and light themes<br>
 :white_check_mark: CRUD for Tasks<br>
-:shipit: Designs for CRUD for Tasks<br>
+:white_check_mark: Designs for CRUD for Tasks<br>
 Designs for CRUD for Tasks - Description<br>
 :white_check_mark: Add, Update - Collapsible fields : Quick Add<br>
 :construction: Work on Detailed Add<br>
 :white_check_mark: Listing, Delete - In Task Paper<br>
-:shipit: Delete - time based : give 5 seconds for user to undo the change<br>
+:white_check_mark: Delete - time based : give 5 seconds for user to undo the change<br>
