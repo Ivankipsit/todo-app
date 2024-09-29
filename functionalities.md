@@ -33,9 +33,10 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 ## Frontend
 
 :construction: Work in both dark and light themes<br>
-:construction: CRUD for Tasks<br>
+:white_check_mark: CRUD for Tasks<br>
 :shipit: Designs for CRUD for Tasks<br>
 Designs for CRUD for Tasks - Description<br>
-:construction: Add, Update - Collapsible fields : Quick Add and Detailed Add<br>
-:shipit: Listing, Delete - In Task Paper<br>
+:white_check_mark: Add, Update - Collapsible fields : Quick Add<br>
+:construction: Work on Detailed Add<br>
+:white_check_mark: Listing, Delete - In Task Paper<br>
 :shipit: Delete - time based : give 5 seconds for user to undo the change<br>
