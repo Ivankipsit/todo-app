@@ -18,7 +18,7 @@ const taskInitiateInitialState = {
   complete_by: null,
 };
 
-const renderFunction = (state, action) => {
+export const renderFunction = (state, action) => {
   switch (action.type) {
     case 'update':
       return {
