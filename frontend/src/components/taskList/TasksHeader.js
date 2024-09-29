@@ -41,7 +41,7 @@ export default function TasksHeader({ notifyChange }) {
   );
   const [open, setOpen] = useState(false);
   const toggleOpen = () => {
-    resetFields()
+    resetFields();
     setOpen(!open);
   };
 
@@ -52,13 +52,18 @@ export default function TasksHeader({ notifyChange }) {
     });
   };
 
+  const isAllParamsValid = () => {
+    return Object.values(state).every(
+      (value) => value !== '' && value !== null
+    );
+  };
+
   function handleSaveTask() {
     const data = { ...state, complete_by: dayjs(state.complete_by).format() };
     axios
       .post(`${TASKS}/`, data)
       .then((response) => {
-        console.log(response);
-        resetFields();
+        toggleOpen();
         notifyChange();
       })
       .catch((error) => {
@@ -66,7 +71,7 @@ export default function TasksHeader({ notifyChange }) {
       });
   }
   return (
-    <Box>
+    <Box sx={{ mb: open ? 1 : 0 }}>
       <Paper sx={{ p: 1, px: 1.5, m: 1 }}>
         <Grid2
           container
@@ -161,6 +166,7 @@ export default function TasksHeader({ notifyChange }) {
               </Grid2>
               <Grid2>
                 <Button
+                  disabled={!isAllParamsValid()}
                   variant="outlined"
                   color={'success'}
                   startIcon={<LoupeIcon />}
