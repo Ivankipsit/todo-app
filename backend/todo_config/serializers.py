@@ -3,11 +3,20 @@ from .models import Tasks
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    is_draft = serializers.SerializerMethodField()
+    # is_draft = serializers.SerializerMethodField()
 
     class Meta:
         model = Tasks
-        fields = ["id", "title", "description", "complete_by", "is_draft", "created_on"]
+        fields = [
+            "id",
+            "title",
+            "description",
+            "starred",
+            "completed",
+            "complete_by",
+            # "is_draft",
+            "created_on",
+        ]
 
     def get_is_draft(self, obj):
         """
