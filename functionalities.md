@@ -14,11 +14,12 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 
 :white_check_mark: add time and date for task completion<br>
 :white_check_mark: display tasks in ascending order of time and date<br>
-:no_entry: filter for a specific date<br>
-:no_entry: search a specific task<br>
+:construction: filter for a specific date range<br>
+:construction: search a specific task<br>
 :no_entry: have low/medium/high priority<br>
 :no_entry: implement jwt<br>
 :game_die: add creation time and date of task with the created user<br>
+:game_die: have basic pagination ?/5/10/25<br>
 :game_die: have mui icons for each task<br>
 :game_die: step wise task - like a stepper. two types of task, simple or workflow type. like having a main task as 1. and having 1.1,1.2,1.3.<br>
 :game_die: show like a dashboard count<br>
@@ -38,5 +39,7 @@ For more icons - [https://gist.github.com/rxaviers/7360908](https://gist.github.
 Designs for CRUD for Tasks - Description<br>
 :white_check_mark: Add, Update - Collapsible fields : Quick Add<br>
 :construction: Work on Detailed Add<br>
+:construction: Search feature<br>
 :white_check_mark: Listing, Delete - In Task Paper<br>
 :white_check_mark: Delete - time based : give 5 seconds for user to undo the change<br>
+:game_die: handling pagination in frontend<br>
