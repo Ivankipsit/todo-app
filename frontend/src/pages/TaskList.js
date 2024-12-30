@@ -27,6 +27,7 @@ import dayjs from 'dayjs';
 import Task from '../components/taskList/Task';
 import TasksSortAndFilter from '../components/taskList/TasksSortAndFilter';
 import { TaskLoadingSkeleton } from '../components/taskList/utils';
+import BoxPagination from '../components/common/layouts/BoxPagination';
 
 const initialSortAndFilter = {
   filter: [],
@@ -52,6 +53,7 @@ const actions = [
 ];
 export default function TaskList() {
   const [data, setData] = useState(null);
+  const [page, setPage] = useState(1);
   const [filterState, filterDispatch] = useReducer(
     renderFunction,
     initialSortAndFilter
@@ -88,33 +90,37 @@ export default function TaskList() {
   }, [changeMonitor]);
   return (
     <>
-      <TasksHeader notifyChange={notifyChange} />
-      <TasksSortAndFilter
-        state={filterState}
-        dispatch={filterDispatch}
-        notifyChange={notifyChange}
-      />
-      <Box sx={{ m: 1 }}>
-        {isLoading ? (
-          <Grid2 container spacing={1} direction={'row'}>
-            {Array.from(new Array(4)).map((item, index) => (
-              <Grid2 size={{ xs: 12, md: 6, lg: 4 }}>
-                <TaskLoadingSkeleton />
+      <Grid2 container justifyContent={'center'}>
+        <Grid2>
+          <TasksHeader notifyChange={notifyChange} />
+          <TasksSortAndFilter
+            state={filterState}
+            dispatch={filterDispatch}
+            notifyChange={notifyChange}
+          />
+          <Box sx={{ m: 1 }}>
+            {isLoading ? (
+              <Grid2 container spacing={1} direction={'row'}>
+                {Array.from(new Array(4)).map((item, index) => (
+                  <Grid2 key={index} size={{ xs: 12, md: 6, lg: 4 }}>
+                    <TaskLoadingSkeleton />
+                  </Grid2>
+                ))}
               </Grid2>
-            ))}
-          </Grid2>
-        ) : (
-          <Grid2 container spacing={1}>
-            {data &&
-              data.map((task, index) => (
-                <Grid2 key={index} size={{ xs: 12, md: 6, lg: 4 }}>
-                  <Task taskDetails={task} notifyChange={notifyChange} />
-                </Grid2>
-              ))}
-          </Grid2>
-        )}
-      </Box>
-
+            ) : (
+              <Grid2 container spacing={1}>
+                {data &&
+                  data.map((task, index) => (
+                    <Grid2 key={index} size={{ xs: 12, md: 6, lg: 4 }}>
+                      <Task taskDetails={task} notifyChange={notifyChange} />
+                    </Grid2>
+                  ))}
+              </Grid2>
+            )}
+          </Box>
+        </Grid2>
+        <Grid2>{/* <BoxPagination /> */}</Grid2>
+      </Grid2>
       <SpeedDial
         ariaLabel="SpeedDial controlled open example"
         sx={{ position: 'absolute', bottom: 16, right: 16 }}

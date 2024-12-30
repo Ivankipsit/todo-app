@@ -25,7 +25,7 @@ export const TaskLoadingSkeleton = () => {
                 justifyContent={'space-between'}
               >
                 {Array.from(new Array(3)).map((item, index) => (
-                  <Grid2>
+                  <Grid2 key={index}>
                     <Skeleton
                       variant="circular"
                       width={30}
@@ -44,7 +44,7 @@ export const TaskLoadingSkeleton = () => {
         <Grid2 size={{ xs: 12 }}>
           <Grid2 container direction={'column'}>
             {['200px', '150px'].map((item, index) => (
-              <Grid2 size={{ xs: 12 }}>
+              <Grid2 key={index} size={{ xs: 12 }}>
                 <Skeleton
                   variant="text"
                   width={item}
