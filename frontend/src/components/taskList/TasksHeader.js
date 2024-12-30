@@ -1,5 +1,5 @@
 import { Box, Button, Collapse, Grid2, Paper } from '@mui/material';
-import React, { useReducer, useState } from 'react';
+import React, { useEffect, useReducer, useState } from 'react';
 import LoupeIcon from '@mui/icons-material/Loupe';
 import FieldGrid from '../common/layouts/FieldGrid';
 import InputTextField from '../common/fields/InputTextField';
@@ -11,6 +11,8 @@ import InputDateTimeField from '../common/fields/InputDateTimeField';
 import dayjs from 'dayjs';
 import axios from 'axios';
 import { TASKS } from '../../appConfig/urlConfig';
+import TasksSearch from './TasksSearch';
+import { TasksContext, useTasks } from '../../appConfig/hooks/TasksContext';
 
 const taskInitiateInitialState = {
   title: '',
@@ -82,16 +84,28 @@ export default function TasksHeader({ notifyChange }) {
         >
           <Grid2>My Tasks</Grid2>
           <Grid2>
-            <Button
-              variant="outlined"
-              color={open ? 'error' : 'secondary'}
-              startIcon={open ? <CloseIcon /> : <LoupeIcon />}
-              onClick={() => {
-                toggleOpen();
-              }}
+            <Grid2
+              container
+              spacing={2}
+              direction={'row'}
+              alignItems={'center'}
             >
-              {open ? 'Close' : 'Add Task'}
-            </Button>
+              <Grid2>
+                <TasksSearch />
+              </Grid2>
+              <Grid2>
+                <Button
+                  variant="outlined"
+                  color={open ? 'error' : 'secondary'}
+                  startIcon={open ? <CloseIcon /> : <LoupeIcon />}
+                  onClick={() => {
+                    toggleOpen();
+                  }}
+                >
+                  {open ? 'Close' : 'Add Task'}
+                </Button>
+              </Grid2>
+            </Grid2>
           </Grid2>
         </Grid2>
       </Paper>
